@@ -79,8 +79,25 @@ variable "max_instance_request_concurrency" {
   default     = 50
 }
 
-variable "langchain_endpoint" {
-  description = "Endpoint to use for LangSmith tracing"
+variable "fireworks_api_key" {
+  description = "Fireworks api key to use for the backend"
   type        = string
-  default     = "https://api.smith.langchain.com"
+  default     = ""
+}
+
+variable "anthropic_api_key" {
+  description = "Anthropic api key to use for the backend"
+  type        = string
+  default     = ""
+}
+
+variable "env_vars" {
+  description = "Environment variables to set on the backend"
+  type        = map(string)
+  default     = {}
+}
+
+variable "cloudsql_instance_name" {
+  description = "The name of the Cloud SQL instance to connect to"
+  type        = string
 }

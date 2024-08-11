@@ -7,7 +7,7 @@ from langchain.smith import RunEvalConfig
 from langsmith import Client
 
 # Ugly. Requires PYTHONATH=$(PWD) to run
-from main import create_chain, get_retriever
+from backend.chain import create_chain, get_retriever
 
 _PROVIDER_MAP = {
     "openai": ChatOpenAI,
@@ -15,7 +15,7 @@ _PROVIDER_MAP = {
 }
 
 _MODEL_MAP = {
-    "openai": "gpt-3.5-turbo-16k",
+    "openai": "gpt-3.5-turbo-1106",
     "anthropic": "claude-2",
 }
 
